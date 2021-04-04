@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>A critical design guide</title>
+	<meta name="description" content="A design guide that covers the ways design can be used to mitigate digital privacy and civil liberties risks">
+	<meta name="keywords" content="Kiran, Wattamwar, critical design, privacy, civil liberties, dark patterns, design patterns">
+	<meta name="author" content="Kiran Wattamwar">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,500;1,700&family=Spectral:ital,wght@0,500;0,600;0,800;1,400;1,500;1,600;1,800&display=swap" rel="stylesheet">
+	
+	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'/>
+	<link rel='stylesheet' href='css/style.css'/>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</head>
+<body>
+
+
+<div id="frame">
+	<div id="progress-bar"></div>
+
+	<div id="previous-chevron" class="page-advance" onClick="updatePage(false);" hidden>
+		<img src="img/chevron-right.svg">
+	</div>
+	<div id="next-chevron" class="page-advance" onClick="updatePage(true);">
+		<img src="img/chevron-right.svg">
+	</div>
+
+	<div id="previous-row" class="row-advance" onClick="updateRow(false);">
+		<span id="previous-row-title" class="row-advance-button">Previous Row</span>
+	</div>
+
+	<div id="next-row" class="row-advance" onClick="updateRow(true);">
+		<span id="next-row-title" class="row-advance-button">Next Row</span>
+	</div>
+
+	<div id="row-title">Placeholder Title</div>
+	<div id="page-title">Placeholder Title</div>
+</div>
+
+
+
+<div id="r0-p0" class="page">
+	Test Content
+</div>
+
+<!-- <div id="r1-p0" class="page"></div>
+<div id="r1-p1" class="page"></div>
+<div id="r1-p2" class="page"></div>
+
+<div id="r2-p0" class="page"></div>
+<div id="r2-p1" class="page"></div> -->
+
+
+
+</body>
+</html>

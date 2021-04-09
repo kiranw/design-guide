@@ -1,14 +1,16 @@
 var layout = 
 [
     {"title": "Introduction",   "row":0, "background-color": "#FAB1A5", "pages": ["Intro"]},
-    {"title": "Surveillance",   "row":1, "background-color": "#DA6668", "pages": ["Intro-S", "Panopticon", "Third Page"]},
-    {"title": "Addiction",      "row":2, "background-color": "#5158A8", "pages": ["Intro-A", "Casino"]},
-    {"title": "Friction",       "row":2, "background-color": "#FDC872", "pages": ["Intro-F", "Unsubscribe"]},
-    {"title": "Commons",        "row":2, "background-color": "#2E706C", "pages": ["Intro-C", "Libraries"]}       
+    {"title": "Surveillance",   "row":1, "background-color": "#DA6668", "pages": ["Surveillance Intro", "Panopticon", "Cameras", "Page 4"]},
+    {"title": "Addiction",      "row":2, "background-color": "#5158A8", "pages": ["Addiction Intro", "Casino"]},
+    {"title": "Friction",       "row":3, "background-color": "#FDC872", "pages": ["Friction Intro", "Unsubscribe"]},
+    {"title": "Commons",        "row":4, "background-color": "#2E706C", "pages": ["Commons Intro", "Libraries"]}       
 ]
 
-currentRow = 1;
+currentRow = 0;
 currentPage = 0;
+
+
 
 $(document).ready(function() {
     // var maxScrollX = $(document).width() - $('body').width();
@@ -45,20 +47,29 @@ function setRow(row){
     currentRow = row;
     currentPage = 0;
 
+
+    const targetDiv = "#r" + currentRow;
+    $("html, body").animate({scrollTop: $(targetDiv).offset().top }, 300);
+
     updateRowTitle(currentRow, currentPage);
     updateNextRowTitle(currentRow, currentPage);
     updatePrevRowTitle(currentRow, currentPage);
     setPage(0);
-    $("#frame").css('background-color', layout[currentRow]["background-color"]);
 }
 
 function updatePage(increment){
+    beforePage = currentPage;
     increment ? currentPage = Math.min(currentPage + 1, layout[currentRow]["pages"].length - 1) : currentPage = Math.max(currentPage - 1, 0);
-    setPage(currentPage);
+
+    if (beforePage != currentRow) setPage(currentPage) ;
 }
 
 function setPage(page){
     currentPage = page;
+
+    const targetDiv = getID(currentRow,currentPage);
+    console.log(targetDiv);
+    $("#r"+currentRow).animate({scrollLeft: $(targetDiv).offset().left }, 300);
 
     if (page == 0 || page == layout[currentRow]["pages"].length - 1) {
         $("#next-row-title").show();
@@ -83,7 +94,7 @@ function updateRowTitle(row,page) {
 }
 
 function updateNextRowTitle(row,page) {
-    if (layout.length > (row + 1)){
+    if (layout.length > (row + 1) && row > 0){
         $("#next-row").show();
         $("#next-row-title").text(layout[row+1]["title"] + " ↓");
     } else {
@@ -104,7 +115,7 @@ function updatePrevRowTitle(row,page) {
 // UPDATE PAGE UTILITIES
 
 function getID(row,page) {
-    return "r" + row + "-p" + page
+    return "#r" + row + "-p" + page
 }
 
 function updateProgressFraction(row,page) {

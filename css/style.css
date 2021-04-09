@@ -60,20 +60,20 @@
 }
 
 
-html, body {
+body {
 	margin: 0;
 	height: 100%;
 	font-family: 'Karla', sans-serif;
-	overflow-x: none;
-	overflow-y: none;
+	/*overflow: hidden;*/
+	scroll-behavior: smooth;
 }
 
 
 #frame {
 	width: 100vw;
 	height: 100vh;
-	position: absolute;
-	background-color: #FAB1A5;
+	position: fixed;
+	z-index: 100;
 	-webkit-transition: background-color 0.3s;
 }
 
@@ -113,25 +113,11 @@ html, body {
 	right: 0px;
 }
 
-
-.row {
-	width: 100vw;
-	height: 100vh;
-}
-
-.page {
-	float: left;
-	width: 100vw;
-	height: 100vh;
-}
-
 #row-title, #page-title {
 	margin-top: 20px;
 	margin-left: 20px;
-	/*text-transform: uppercase;*/
 	font-weight: 600;
 	color: white;
-	/*letter-spacing: 1px;*/
 }
 
 .row-advance {
@@ -166,3 +152,78 @@ html, body {
 .row-advance-button:hover {
 	background-color: rgba(0,0,0,0.7);
 }
+
+
+
+.row {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: scroll;
+}
+
+.page {
+	position: absolute;
+	float: left;
+	width: 100vw;
+	height: 100vh;
+}
+
+.r0 > .page {
+	background-color: #FAB1A5;
+	top: 0vh;
+}
+
+.r1 > .page {
+	background-color: #DA6668;
+}
+
+.r2 > .page {
+	background-color: #5158A8;
+}
+
+.r3 > .page {
+	background-color: #FDC872;
+}
+
+.r4 > .page {
+	background-color: #2E706C;
+}
+
+.cover {
+	left: 0vw;
+}
+
+.p1 {
+	left: 100vw;
+}
+
+.p2 {
+	left: 200vw;
+}
+
+.p3 {
+	left: 300vw;
+}
+
+.p4 {
+	left: 400vw;
+}
+
+
+/*.cover {
+	vertical-align: center;
+	text-align: center;
+}
+
+.cover > .title {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: white;
+}
+
+.cover > .description {
+
+}
+
+*/

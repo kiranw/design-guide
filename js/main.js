@@ -1,20 +1,21 @@
 var layout = 
 [
-    {"title": "Introduction",   "row":0, "background-color": "#FAB1A5", "pages": ["Intro"]},
-    {"title": "Surveillance",   "row":1, "background-color": "#DA6668", "pages": ["Surveillance Intro", "Panopticon", "Cameras", "Page 4"]},
-    {"title": "Addiction",      "row":2, "background-color": "#5158A8", "pages": ["Addiction Intro", "Casino"]},
-    {"title": "Friction",       "row":3, "background-color": "#FDC872", "pages": ["Friction Intro", "Unsubscribe"]},
-    {"title": "Commons",        "row":4, "background-color": "#2E706C", "pages": ["Commons Intro", "Libraries"]}       
+    {"title": "Home",           "row":0, "pages": ["Intro"]},
+    {"title": "Poka-Yoke",      "row":1, "pages": ["Surveillance Intro", "Panopticon", "Cameras", "Page 4"]},
+    {"title": "Privacy",        "row":2, "pages": ["Addiction Intro", "Casino"]},
+    {"title": "Clarity",        "row":3, "pages": ["Friction Intro", "Unsubscribe"]},
+    {"title": "Transparency",   "row":4, "pages": ["Commons Intro", "Libraries"]},       
+    {"title": "Control",        "row":5, "pages": ["Commons Intro", "Libraries"]}       
 ]
 
 currentRow = 0;
 currentPage = 0;
 
 
-
 $(document).ready(function() {
-    // var maxScrollX = $(document).width() - $('body').width();
   setRow(0);
+
+  // $("g.active>rect").animate({-webkit-filter: drop-shadow(0px 0px 15px #54A6FF)}, 100);
 });
 
 
@@ -47,9 +48,7 @@ function setRow(row){
     currentRow = row;
     currentPage = 0;
 
-
-    const targetDiv = "#r" + currentRow;
-    $("html, body").animate({scrollTop: $(targetDiv).offset().top }, 300);
+    $("#r" + currentRow)[0].scrollIntoView({behavior: 'smooth'});
 
     updateRowTitle(currentRow, currentPage);
     updateNextRowTitle(currentRow, currentPage);
@@ -60,16 +59,15 @@ function setRow(row){
 function updatePage(increment){
     beforePage = currentPage;
     increment ? currentPage = Math.min(currentPage + 1, layout[currentRow]["pages"].length - 1) : currentPage = Math.max(currentPage - 1, 0);
-
-    if (beforePage != currentRow) setPage(currentPage) ;
+    console.log("beforePage: ",beforePage);
+    console.log("targetPage: ",currentPage);
+    if (beforePage != currentPage) setPage(currentPage);
 }
 
 function setPage(page){
     currentPage = page;
 
-    const targetDiv = getID(currentRow,currentPage);
-    console.log(targetDiv);
-    $("#r"+currentRow).animate({scrollLeft: $(targetDiv).offset().left }, 300);
+    $(getID(currentRow,currentPage))[0].scrollIntoView({behavior: 'smooth'});
 
     if (page == 0 || page == layout[currentRow]["pages"].length - 1) {
         $("#next-row-title").show();
@@ -91,6 +89,7 @@ function setPage(page){
 
 function updateRowTitle(row,page) {
     $("#row-title").text(layout[row]["title"]);
+    $("#row-title").hide();
 }
 
 function updateNextRowTitle(row,page) {
@@ -136,4 +135,5 @@ function updateNextPageButton(row,page){
 
 function updatePageTitle(row,page){
     $("#page-title").text(layout[row]["pages"][page]);
+    $("#page-title").hide();
 }

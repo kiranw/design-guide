@@ -1,11 +1,13 @@
 var layout = 
 [
-    {"title": "Home",           "row":0, "pages": ["Intro"]},
-    {"title": "Poka-Yoke",      "row":1, "pages": ["Surveillance Intro", "Panopticon", "Cameras", "Page 4"]},
-    {"title": "Privacy",        "row":2, "pages": ["Addiction Intro", "Casino"]},
-    {"title": "Clarity",        "row":3, "pages": ["Friction Intro", "Unsubscribe"]},
-    {"title": "Transparency",   "row":4, "pages": ["Commons Intro", "Libraries"]},       
-    {"title": "Control",        "row":5, "pages": ["Commons Intro", "Libraries"]}       
+    {"title": "Intro",                      "row":0, "pages": ["Intro"]},
+    {"title": "Poka-Yoke",                  "row":1, "pages": ["Intro", "1", "2", "3", "4"]},
+    {"title": "Surveillance",               "row":2, "pages": ["Intro", "1", "2", "3", "4", "5", "6"]},
+    {"title": "Misrepresentation",          "row":3, "pages": ["Intro", "1", "2", "3", "4", "5", "6"]},
+    {"title": "Casino Design",              "row":4, "pages": ["Intro", "1", "2", "3", "4", "5"]},       
+    {"title": "Misdirection",               "row":5, "pages": ["Intro", "1", "2", "3", "4",]},
+    {"title": "Manipulation + Friction",    "row":6, "pages": ["Intro", "1", "2", "3", "4", "5"]},
+    {"title": "Full Text",                  "row":7, "pages": ["Text"]}
 ]
 
 currentRow = 0;
@@ -102,7 +104,7 @@ function updateNextRowTitle(row,page) {
 }
 
 function updatePrevRowTitle(row,page) {
-    if ((row - 1) >= 0) {
+    if ((row - 1) >= 0 && row < layout.length) {
         $("#previous-row").show();
         $("#previous-row-title").text(layout[row-1]["title"] + " ↑");
     } else {
@@ -114,6 +116,7 @@ function updatePrevRowTitle(row,page) {
 // UPDATE PAGE UTILITIES
 
 function getID(row,page) {
+    console.log(row,page);
     return "#r" + row + "-p" + page
 }
 

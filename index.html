@@ -41,8 +41,8 @@
 		<span id="next-row-title" class="row-advance-button">Next Row</span>
 	</div>
 
-	<div id="row-title">Placeholder Title</div>
-	<div id="page-title">Placeholder Title</div>
+	<!-- <div id="row-title">Placeholder Title</div>
+	<div id="page-title">Placeholder Title</div> -->
 </div>
 
 
@@ -93,12 +93,13 @@
 	<div id="r1-p0" class="page cover">
 		<div class="large-title">
 			<div class="title-a">A primer </div>
-			<!-- <div class="title-def"></div> -->
 		</div>
+		<br>
+		<img src="img/py.png" style="height: 20%; width: auto">
 		<div class="description">
 			<strong>Defensive design</strong> is a practice of design that anticipates and minimizes room for a product's misuse. Usually, defensive design is for "mistake-proofing" -- consider 3-pronged plugs and sockets, SIM cards, or USBs. These all are designed in a way that they're physically impossible to install in the wrong direction.
 		</div>
-		<br><br>
+		<br><Br>
 		<svg id="arrow-keys" height="110px" viewBox="0 0 203 160">
 	    	<g id="keys" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        <g id="left" transform="translate(22.000000, 48.000000)" stroke="#FFFFFF" stroke-width="3">
@@ -125,28 +126,60 @@
 		</svg>
 	</div>
 	<div id="r1-p1" class="page p1">
-		<!-- <div class="page-contents"> -->
-			Surveillance p1
-		<!-- </div> -->
+		<div class="description">
+			Design is a problem-solving practice. It's one that can This project covers a series of case studies exploring the question: how might we intentionally be our own red teams? How might we design protectively and proactively to consider potential unintended consequences that technology might enable? While this certainly isn't exhaustive, this project aims to build a repository of case studies to help us identify design patterns in the wild and think of new ways to design protectively. 
+			<br><br>
+			Let's start by learning about <strong><span class="text-emphasis">Poka-Yoke</span></strong>.
+			<br><br>
+			It's a mistake-proofing method developed by engineer Shigeo Shingo at Toyota to reduce errors made on the manufacturing line.
+			While Poka-Yoke's methods are broad and far-reaching, we'll focus on one method in particular.<br><br>
+			<img src="img/py2.png" style="height: 300px; display: inline-block; width: auto; bottom: 10%; float: right; right: 0;">
+			<strong><span class="text-emphasis">The Contact Method</span></strong>:<br> Use <span class="text-emphasis">physical attributes</span> of something (like its color, size, weight, shape) to prevent misuse. The examples from the last slide, like the electrical socket, follow this.<br><br>
+
+		</div>
 	</div>
 	<div id="r1-p2" class="page p2">
-		<!-- <div class="page-contents"> -->
-			Surveillance p2/
-		<!-- </div> -->
+		<div class="description">
+			If we broaden Poka-Yoke's objectives, how might we use similar <span class="text-emphasis">defensive methods</span> to protect against the often squishier and more nebulous ways technology can lead to harmful outcomes?<br><br>
+
+			Let's consider the invention of the camera. Before the advent of digital imagers for cameras, photography required long exposures of an image onto chemically treated film. Because exposures could take several minutes (even hours), the subject of a photograph needed to stay still for long periods of time, making the photography of passing strangers in public virtually impossible. With digital cameras, exposure was instantaneous.
+			<br><br><br><br>
+			<img src="img/sitters.png" style="height: auto; display: inline-block; width:100%; bottom: 10%; float: right; right: 0;">
+		</div>
 	</div>
 	<div id="r1-p3" class="page p3">
-		<!-- <div class="page-contents"> -->
-			Surveillance p3
-		<!-- </div> -->
-	</div>
+		<div class="description">
+			Portable cameras made capturing private persons easier, and enabled the circulation of private information without consent. Justices Warren and Brandeis <span class="text-emphasis">spoke about this</span><span class="text-emphasis"> in The Right to Privacy. </span><br><br>
 
+			Camcorders made these visual records even richer. But without the option to mute video recordings as they were taken, they became tools that could potentially capture private conversations in the public realm.<br><br>
+			<img src="img/Findface.png" style="height: auto; width:100%; margin-bottom: 20px">
+			<br><br>
+			Now, apps like FindFace, Clearview, and PimEyes build upon modern smartphones and their cameras. They apply face recognition to large swathes of images, which can be taken in public spaces without the consent of the photograph’s subject. Even more worrying, the anonymity of people in public spaces is now called into question.
+
+		</div>
+	</div>
+	<div id="r1-p4" class="page p4">
+		<div class="description">
+			<img src="img/signal.png" style="height: 600px; margin-top: -30px; display: inline-block; width: auto; float: right; right: 0;">
+			This is not to say that digital cameras are bad. Instead, we must <span class="text-emphasis">think critically</span> about how we can safeguard our emergent technology from adverse consequences that cascade as technology continues to improve. <br><br>
+
+			Signal, for example, offers to blur faces in images to combat the risk of the identification of protesters by law enforcement -- sometimes, there are ways product design can mitigate the risk of civil rights abuses and privacy intrusions.<br><br>
+
+			Making conscious decisions that can <span class="text-emphasis">future-proof</span> our systems against difficult situations in the future is at the center of designing a sustainable system.<br><br>
+		</div>
+	</div>
 </div>
 
 <div id="r2" class="r2 row">
 	<div id="r2-p0" class="page cover">
 		<div class="large-title">
 			<div class="title-a">Part 1</div>
-			<div class="title-def">Privacy (Surveillance)</div>
+			<div class="title-def">Surveillance</div>
+			<div class="title-description">designing for privacy</div>
+		</div>
+		<img src="img/Panopticon doodle.png" style="height: 200px; width: auto; margin-top: -20px; margin-bottom: -50px">
+		<div class="description">
+			<strong>Bentham's panopticon</strong> was created to maximize surveillance and minimize inmate privacy. Let's dig into how this was designed, and how we can consciensiously design to instead <strong>maximize agency and privacy</strong> for users of technology.  
 		</div>
 		<br><br>
 		<svg id="arrow-keys" height="110px" viewBox="0 0 203 160">
@@ -175,7 +208,55 @@
 		</svg>
 	</div>
 	<div id="r2-p1" class="page p1">
-		
+		<div class="description">
+			The panopticon is the classical example of a design that prioritizes surveillance. Designed by philosopher Jeremy Bentham, it's a prison design that seeks to answer: how might one create opportunities for the <span class="text-emphasis">maximum possible surveillance</span> with the <span class="text-emphasis">fewest security guards</span>? 
+		</div>
+		<br><br>
+		<img src="img/panopticon.png" style="width: 70%;margin-left: 15%; height: auto; text-align: center">
+	</div>
+	<div id="r2-p2" class="page p2">
+		<div class="description">
+			Bentham described the design as a “new mode of obtaining power of mind over mind.” The design was intended to be used as a blueprint for prisons (which he funded the development of in London during his lifetime), with the goal of also overseeing prison labor. <span class="text-emphasis">Professor Simone Browne</span>, in Dark Matters: On the Surveillance of Blackness, writes of the similarities between Bentham’s panopticon and the design of ships carrying enslaved people. The panopticon is a physical manifestation of implicit structural violence, racism, and exploitation.
+			<br><br>
+			Since Bentham’s initial thought experiment, the panopticon has been adopted by several prisons around the world (including a few in the US). By 2006 in Amsterdam, Lelystad Prison was called the “first digital panopticon prison,” with inmates tracked by electronic tags and a low guard-to-inmate ratio. How might we protect <strong>against this manipulation through design</strong>?
+			<br><br>
+			<br><br>			
+			<img src="img/tags.jpg" style="width: 60%;margin-left: 20%; height: auto; text-align: center">
+		</div>
+	</div>
+	<div id="r2-p3" class="page p3">
+		<div class="description" style="margin-top:30px">			
+			Design can be deployed to surveil people (by harvesting their information passively, for example) but can also be used to help people understand how exposed their activity might lead them to be. Surveillance and its potential privacy harms are often discrete, especially when they lack explicit consent mechanisms. Consider Cookie Banners and Terms and Conditions - is the choice architecture here really presenting options to users?<br><br><br>
+			<img src="img/cookies.png" style="width: 100%;height: auto; text-align: center">
+
+		</div>
+	</div>
+	<div id="r2-p4" class="page p4">
+		<div class="description">
+			<img src="img/privacylabel.png" style="height: 600px; margin-top: -30px; display: inline-block; width: auto; float: right; right: 0;">
+			<span class="text-emphasis">Apple’s “Nutrition” privacy labels</span> instead expose this information in a legible way, before user consent is collected. Though they are not without their own flaws, these labels make understanding this data significantly easier.<br><br>
+			Though communicating this information is one of the purposes of Terms and Conditions and Privacy Policies, they've become so protective against litigation that the language often feels hard to interpret - these privacy labels are a promising approach towards communicating how exactly our data is processed by a data broker, and give users agency to decide if this seems reasonable or not. <br><br>
+			The <a href="https://law.stanford.edu/organizations/pages/legal-design-lab/">Legal Design Lab</a> at Stanford is exploring this particular issue deeply by bringing human-centered approaches into the delivery of legal services.
+		</div>
+	</div>
+	<div id="r2-p5" class="page p5">
+		<div class="description">
+			By creating a standard format for how this information is displayed, this design also allows users to compare practices across apps to contextualize this information. If this information is accurate and can be enforced by hardware and software gates, users can much more easily understand the ways in which their data is being collected, stored, and used.
+			<br><br><br>
+			<img src="img/labels.png" style="width: 100%;height: auto; text-align: center">
+		</div>
+
+	</div>
+	<div id="r2-p6" class="page p6">
+		<div class="description">
+			Another model that can be used to help someone understand how they might be watched is by sharing their data (and the inferences made on their data) with them.
+
+			Facebook’s <strong>View as</strong> feature and Lunchclub's self profile viewer capture this intention - 
+			<br><br>
+			<img src="img/view as.png" style="width: 100%;height: auto; text-align: center">
+			<br>
+			<strong>Anne Cavoukian's</strong> framework for <strong>Privacy By Design</strong> and the <strong>Fair Information Practice Principles (FIPPs)</strong> are excellent resources to continue along!
+		</div>
 	</div>
 </div>
 
@@ -183,7 +264,13 @@
 	<div id="r3-p0" class="page cover">
 		<div class="large-title">
 			<div class="title-a">Part 2</div>
-			<div class="title-def">Clarity (Misrepresentation)</div>
+			<div class="title-def">Misrepresentation</div>
+			<div class="title-description">designing for clarity</div>
+		</div>
+		<br>
+		<img src="img/funhousedoodle.png" style="height: 170px; width: auto; margin-bottom: -30px"><br>
+		<div class="description">
+			aka how to avoid designing a digital funhouse...
 		</div>
 		<br><br>
 		<svg id="arrow-keys" height="110px" viewBox="0 0 203 160">
@@ -212,15 +299,63 @@
 		</svg>
 	</div>
 	<div id="r3-p1" class="page p1">
-		
+		<div class="description">
+			For our physical analog here, we'll consider the funhouse. When you know you're about to enter a space where distortion is the norm, the experience of a funhouse might actually be fun. But what if you didn't know that what you're seeing was misrepresented? In this section, let's think about how we can avoid building a <strong><span class="text-emphasis">Digital Funhouse</span></strong>.
+			<br><br><br><br>
+			<img src="img/funhouse.png" style="width: 140%;height: auto; text-align: center; margin-left: -20%">
+		</div>
+	</div>
+	<div id="r3-p2" class="page p2">
+		<div class="description">
+			You might remember Steve Harvey going <span class="text-emphasis">viral in 2015</span> for announcing the wrong winner for Miss Universe. To his credit, the card he was reading was awfully hard to parse quickly - and for someone under pressure on a big stage, missing the fine print might be easy to do. Good information architecture and an intentional use of visual hierarchy can start to correct for misunderstandings like this.<br><br>
+			Can you think of other times when users might be emotional or stressed while using a service? Government services, legal services, taxes, leases... there are many times we might encounter a stressful decision point where the service architecture could absolutely benefit from visual design, not for aesthetics, but for function. <br><br><br>
+			<img src="img/steveharvey.png" style="width: 100%;height: auto; text-align: center;">
+		</div>
+	</div>
+	<div id="r3-p3" class="page p3">
+		<div class="description" style="margin-top:20px;">
+			Defaults in products are a powerful way to sway the way a user might make decisions. While the <span class="text-emphasis">Default Effect</span> is certainly relevant to this project, here, we're looking at how a defaultpresented inaccurate information. MaxMind, an IP address mapping service, is used by law enforcement and consumers to track devices to a location. When MaxMind can't provide a granular location for an IP address (and even those are estimates), it would instead provide a more general estimate (a city, state or country) -- but with full GPS precision, which sometimes meant estimating an IP at the dead center of the USA. <br><br> 
+			A family in remote Kansas was frequently visited by sherrifs and police departments who <a href="https://www.theguardian.com/technology/2016/aug/09/maxmind-mapping-lawsuit-kansas-farm-ip-address">believed a family's farm was the site of kidnapped children, stolen cell phones, organized computer fraud, and attempted suicides</a>.
+			MaxMind's bad choice of default behavior here not only misrepresents truth (you cannot simply "round" a location up, because that still points to another location) but also demonstrates how technology can portray data to have a <span class="text-emphasis">false sense of precision</span> and seem objective.
+			<br><br>
+			<img src="img/MaxMind.png" style="width: 100%;height: auto; text-align: center;">
+		</div>
+	</div>
+	<div id="r3-p4" class="page p4">
+		<div class="description"><br>
+			<span class="text-emphasis">"Snapchat dysmorphia"</span> has come to capture the body dysmorphia users feel after comparing themselves to their filtered faces. Snapchat beauty filters not only promote unrealistic beauty ideals, but distort faces to specifically promote white beauty standards -- these filters distort face shapes to be slimmer, enlarge eyes, contour and slim nose shapes, and lighten dark skin tones. These filters set an uninclusive definition for beauty in a way that disproportionately creates this dysmorphia among those <span class="text-emphasis">without white features</span>, also cited as the reason many <span class="text-emphasis">seek plastic surgery</span> to resemble their filtered selfies.
+			 <br><br><br><br>
+			<img src="img/snapchat.png" style="height: auto; width: 100%;">
+		</div>
+	</div>
+	<div id="r3-p5" class="page p5">
+		<div class="description"  style="margin-top:10px;">
+			Sometimes, misrepresentation comes from data vis choices. In Georgia, a COVID-19 chart on the Department of Public Health's website implied that the <span class="text-emphasis">number of new confirmed cases in the counties with the most infections had dropped every day</span> for the previous two weeks. Despite the consistent downward trajectory, the data was muddled with the fact that in it's x-axis, dates were not listed chronologically so that counties would appear in the same position on the x axis consistently. Sorting mistakes like these critically change how we interpret data.<br><br>
+			Design is an act of choosing how someone experiences something - when it's information, think about why you are presenting things the way you do, and what your assumptions are.<br><br>
+			<img src="img/gadashboard.png" style="height: auto; width: 95%;margin-left: 50px;">
+
+		</div>
+	</div>
+	<div id="r3-p6" class="page p6">
+		<div class="description">
+			<span class="text-emphasis">Edward Tufte's principles</span> for Data Visualization are an excellent framework to check that data is presented legibly and with appropriate context, and the <span class="text-emphasis">Gestalt principles</span> help us frame the ways people interpret visual information. If you design in data dense environments, or are creating anything that presents information to someone, consider integrating these into your process!
+			<br><br><br>
+			<img src="img/tufte.png" style="height: auto; width: 100%;">
+		</div>
 	</div>
 </div>
 
 <div id="r4" class="r4 row">
 	<div id="r4-p0" class="page cover">
 		<div class="large-title">
-			<div class="title-a">Part 3</div>
-			<div class="title-def">Transparency (Misdirection)</div>
+			<div class="title-a">a brief intermission</div>
+			<div class="title-def">Casino Design</div>
+			<div class="title-description">Learning from Las Vegas</div>
+		</div>
+		<br>
+		<img src="img/casino-doodle.png" style="height: 130px; width: auto; margin-bottom: -10px"><br>
+		<div class="description">
+			At this detour, we're going to go over two eras of casino design to set us up for the next to parts...
 		</div>
 		<br><br>
 		<svg id="arrow-keys" height="110px" viewBox="0 0 203 160">
@@ -249,15 +384,70 @@
 		</svg>
 	</div>
 	<div id="r4-p1" class="page p1">
-		
+		<div class="description">
+			<strong>Gaming design</strong><br><br>
+			Bill Friedman was a foundational thinker in strategic casino design - in his seminal text book, he says: "The only relevant consideration for casino design are these: What percentage of visitors gamble? What percentage return to gamble? Nothing else matters."<br><br><br>
+			Friedman's <span class="text-emphasis">“Gaming design”</span> philosophy held many principles to its core. Here are a few...<br><br>
+			<ul>
+				<li><strong>Principle 2:</strong> Gambling Equipment Immediately Inside Casino Entrances Beats Vacant Entrance Landings and Empty Lobbies</li>
+				<li><strong>Principle 4:</strong> The Maze Layout Beats Long, Wide, Straight Passageways and Aisles</li>
+				<li><strong>Principle 8:</strong> Low Ceilings Beat High Ceilings</li>
+				<li><strong>Principle 9:</strong> Gambling Equipment As the Décor Beats Impressive and Memorable Decorations</li>
+				<li><strong>Principle 11:</strong> Pathways Emphasizing the Gambling Equipment Beat the Yellow Brick Road</li>
+			</ul><br><br>
+			<span style="opacity:30%"><strong>Source:</strong>  Stripping Las Vegas: A Contextual Review of Casino Resort Architecture</span>
+		</div>
+	</div>
+	<div id="r4-p2" class="page p2">
+		<div class="description">
+			<img src="img/friedman.png" style="height: 450px; display: inline-block; width: auto; bottom: 10%; float: right; right: 0; margin: 40px;">
+			<br><br><br><br><br>To Friedman, capturing casino-goers into tight spaces by making it easy to find a casino and difficult to leave one was a central concept to a casino design that maximizes profit. <br><br><br>In our reading of this case study, we will challenge ourselves to think more expansively: how might we increase user agency instead of limit it? And how can the design of space, whether physical or digital, regulate the way a person makes decisions in that space?<br><br>
+		</div>
+	</div>
+	<div id="r4-p3" class="page p3">
+		<div class="description">
+			<strong><span class="text-emphasis">Playground design</span></strong><br><br>
+			Of course, casino design has evolved since the 2000s - Roger Thomas and Steve Wynn, while designing for the Belagio, challenged Friedman's assumptions about how to best maximize profit. They predicted that if people were more relaxed, they would be willing to place riskier bets. Lowering their psychological barrier to gambling could produce more efficient gains for a casino. Instead of trapping people, their casinos embraced <span class="text-emphasis">“Playground design” and “evo-catuer”</span> — they stimulate the senses.<br><br><br>
+			Here are some properties of their design paradigm:<br><br>
+			<ul>
+				<li>Provide ample natural light</li>
+				<li>Give people excellent wayfinding - a feeling of agency</li>
+				<li>Use high ceilings to create the feeling openness </li>
+				<li>Glamorous lobby spaces with sculptures excite the senses</li>
+				<li>Maximize comfort</li>
+				<li>Instead of entrapping guests in a web of buzzing slot machines, provide clear sightlines to where gamblers want to head next (but make the <strong>right</strong> choice obvious)</li>
+			</ul>
+			<br><br>
+			The designs also speak to guests who might not typically gamble, as their luxurious decor acts as a "type of anesthesia" to numb guests of their significant losses.
+		</div>
+	</div>
+	<div id="r4-p4" class="page p4">
+		<!-- <div class="description">
+		</div> --><br><br><br>
+		<img src="img/casino-2.jpeg" style="height: 80%; width: auto; margin-left: 30%">
+	</div>
+	<div id="r4-p5" class="page p5">
+		<div class="description">
+			<br><Br><br>
+			Today, "playground design" seems to be the winning strategy (even <a href="https://journals.sagepub.com/doi/abs/10.1177/0013916509341791">this paper</a> confirms it.) But there are still many parallels to both design strategies that are still relevant in the digital realm - we'll unpack those in the next two sections.
+			<br><Br><br>
+			<img src="img/casino.png" style="height: auto; width: 100%;">
+		</div>
 	</div>
 </div>
+
+
 
 <div id="r5" class="r5 row">
 	<div id="r5-p0" class="page cover">
 		<div class="large-title">
-			<div class="title-a">Part 4</div>
-			<div class="title-def">Control (Addiction)</div>
+			<div class="title-a">Part 3</div>
+			<div class="title-def">Misdirection</div>
+			<div class="title-description">designing for orientation</div>
+		</div>
+		<img src="img/maze.png" style="height: 180px; width: auto; margin-bottom: -40px;">
+		<div class="description">
+			Information asymmetry can lead users down paths they do not intend to or dont fully understand. How can we design to protect people from this?
 		</div>
 		<br><br>
 		<svg id="arrow-keys" height="110px" viewBox="0 0 203 160">
@@ -286,8 +476,150 @@
 		</svg>
 	</div>
 	<div id="r5-p1" class="page p1">
+		<div class="description">
+			One dark pattern from Friedman's conception (the first kind) of casino design was trapping and building mazes to disorient people, and encourage them to stay within one section of a casino. Removing sightlines or the possibility of leaving encouraged lingering - this pattern is a common digital dark pattern. Let's start with <span class="text-emphasis">e-commerce checkout flows</span>. Whether it's nudges to upgrade, purchase more, choose preferences in non-intuitive ways (with more expensive defaults), or messages that pressure you about scarcity, you've likely experienced some form of these. Confirmsharming, visual interference, trick questions and pressured selling cover <a href="https://arxiv.org/pdf/1907.07032.pdf?mod=article_inline">some of misdirection as a dark pattern</a>.
+			<br><br><br>
+			<img src="img/ecommerce.png" style="height: auto; width: 100%;">
+
+		</div>
+	</div>
+	<div id="r5-p2" class="page p2">
+		<div class="description">
+			Of course, there are many more examples of this pattern and others, like obstruction. Famously, TurboTax's Free tax services which are legally required as an option for low income individuals is hard to discover. There are many points in the discovery workflow that lead to the paid basic version of TurboTax's services, and access points to the truly free tier are not listed or easily discoverable on search engines. <br><br><br><br>
+			<img src="img/turbotax.png" style="height: auto; width: 100%;">
+		</div>
 		
 	</div>
+	<div id="r5-p3" class="page p3">
+		<div class="description">
+			Native advertising leads to similar disorientation (and this overlaps heavily with the misrepresentation section) -- it's the use of embedding advertising in a format that seems native, like an article with a small (and often, easy to miss) advertising label, that mirrors the narrative tone and visual presence of other actual articles. Because they're presented as options among other articles, people may not be aware that they're being led to biased ads. <br><br>
+			<img src="img/nativeads.png" style="height: auto; width: 100%;">
+		</div>
+	</div>
+	<div id="r5-p4" class="page p4">
+		<div class="description">
+			Dark patterns cover much more than misdirection - here are some major categories of Dark Patterns assembled by Jamie Luguri and Lior Jacob Strahilevitz to watch out for as you design with user agency in mind. Are you inadvertedly using any of these patterns, and if you are, do they serve a purpose that empowers better user outcomes?
+
+			<ul>
+				<li><strong>Social proof</strong> Activity messages (misleading notice that others are purchasing, etc) • Testimonials (misleaing positive statements) • Price
+				<li><strong>Nagging</strong>Repeated requests to do something
+				<li><strong>Obstruction</strong> Roach motel (asymmetric signup and canceling) • Price comparison prevention • Intermediate currency • Immortal accounts
+				<li><strong>Sneaking</strong> Sneak into basket • Hidden costs • Hidden subscription / forced continuity • Bait and switch
+				<li><strong>Interface interference </strong> Preselection / aesthetic manipulation • Toying with emotion • False hierarhcy / pressured selling • Disguised ad • Trick questions • Confirmshaming (making a choice seem dishonorable) • Cuteness
+				<li><strong>Forced action</strong> Address book leeching • Privacy Zuckering (tricking people into sharing personal info) • Gamification • Forced Registration
+				<li><strong>Scarcity</strong> Low stock message • High demand message
+				<li><strong>Urgency</strong> Countdown timer • Limited time messages
+			</ul>
+			<br><br><br>
+			<span style="opacity:30%"><strong>Source:</strong>  Shining a light on dark patterns (doi:10.1093/jla/laaa006)</span>
+		</div>
+		
+	</div>
+</div>
+
+<div id="r6" class="r6 row">
+	<div id="r6-p0" class="page cover">
+		<div class="large-title">
+			<div class="title-a">Part 4</div>
+			<div class="title-def">Manipulation + Friction</div>
+			<!-- <div class="title-design-guide">Friction</div> -->
+			<div class="title-description">designing for awareness and control</div>
+		</div>
+		<img src="img/puppet.png" style="height: 200px; width: auto; margin-bottom: -40px">
+		<div class="description">
+			Instead of trapping, this philosophy depends on lowering a person's psychological barriers to make a decision they otherwise may not have.
+		</div>
+		<br><br>
+		<svg id="arrow-keys" height="110px" viewBox="0 0 203 160">
+	    	<g id="keys" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		        <g id="left" transform="translate(22.000000, 48.000000)" stroke="#FFFFFF" stroke-width="3">
+		            <rect id="Rectangle" fill-opacity="0.0817307692" fill="#000000" x="1.5" y="1.5" width="45" height="45" rx="8"></rect>
+		            <line x1="36" y1="24" x2="12" y2="24" id="Path-9"></line>
+		            <polyline id="Path-10" points="21 33.8474662 12 23.8252345 21 13.8474662"></polyline>
+		        </g>
+		        <g id="right" class="active" transform="translate(158.000000, 72.000000) scale(-1, 1) translate(-158.000000, -72.000000) translate(134.000000, 48.000000)" stroke="#FFFFFF" stroke-width="3">
+		            <rect id="Rectangle" fill-opacity="0.0817307692" fill="#000000" x="1.5" y="1.5" width="45" height="45" rx="8"></rect>
+		            <line x1="36" y1="24" x2="12" y2="24" id="Path-9"></line>
+		            <polyline id="Path-10" points="21 33.8474662 12 23.8252345 21 13.8474662"></polyline>
+		        </g>
+		        <g id="up" transform="translate(102.000000, 43.000000) scale(-1, 1) rotate(-270.000000) translate(-102.000000, -43.000000) translate(78.000000, 19.000000)" stroke="#FFFFFF" stroke-width="3">
+		            <rect id="Rectangle" fill-opacity="0.0817307692" fill="#000000" x="1.5" y="1.5" width="45" height="45" rx="8"></rect>
+		            <line x1="36" y1="24" x2="12" y2="24" id="Path-9"></line>
+		            <polyline id="Path-10" points="21 33.8474662 12 23.8252345 21 13.8474662"></polyline>
+		        </g>
+		        <g id="down" transform="translate(102.000000, 101.000000) scale(-1, 1) rotate(-90.000000) translate(-102.000000, -101.000000) translate(78.000000, 77.000000)" stroke="#FFFFFF" stroke-width="3">
+		            <rect id="Rectangle" fill-opacity="0.0817307692" fill="#000000" x="1.5" y="1.5" width="45" height="45" rx="8"></rect>
+		            <line x1="36" y1="24" x2="12" y2="24" id="Path-9"></line>
+		            <polyline id="Path-10" points="21 33.8474662 12 23.8252345 21 13.8474662"></polyline>
+		        </g>
+		    </g>
+		</svg>
+	</div>
+	<div id="r6-p1" class="page p1">
+		<div class="description" style="margin-top:20px">
+			In Roger Thomas and Steve Wynn's "playground design," instead of creating friction, design is strategically used to reduce friction for decisions a system prefers a user to make. <br><br>
+			Fanduel and DraftKings, sports gambling services, make a users' first bet free and match deposits - by making the first bets free, users are more likely to continue betting, where any windfall is a source of encouragement and any loss feels negligible because it was free (making you more likely to continue betting). <br><br>
+			<img src="img/fanduel.png" style="height: auto; width: 100%;">
+		</div>
+	</div>
+	<div id="r6-p2" class="page p2">
+		<div class="description">
+			Netflix's autoplay feature, Youtube's autoplay, and the endless scrolling that many social media services use perform a similar function. By making it easier to continue accessing more content, these seemingly bottomless websites make it increasingly easy to continue spending time on them. <br><br><br>
+			<img src="img/autoplay.png" style="height: auto; width: 100%;">
+		</div>
+	</div>
+	<div id="r6-p3" class="page p3">
+		<div class="description">
+			Of course, it's worth noting that Netflix eventually check's in on you to ask if you're still watching and Instagram now let's you know that "You're all caught up." These nudges are healthy ways to encourage users to decide to continue spending time consuming, with intention and pause. 
+			<img src="img/stillwatching.png" style="height: auto; width: 100%;">
+		</div>
+	</div>
+	<div id="r6-p4" class="page p4">
+		<div class="description">
+			NextDoor is an app that allows neighborhoods to connect online. Though its intentions are to bring communities together, NextDoor's incident reports enabled racial profiling in several communities where black individuals were identified as threats merely for existing in communities. Incident reports previously didn't require supplementary information (many reports would only cite a person's race), but since have been updated to require specific and additional information if race is cited. More recently, NextDoor released features to detect harmful language and warn users about this. Clearly, these problems are not caused by Nextdoor -- they indicate the systemic failures of racist neighborhoods. But building features that enable users to choose and identify those who they don't think belong near their homes enables cascading harmful effects. <Br><br>
+			Building more protective features for incident reporting will not solve racism, but will reduce where it is allowed to flourish. 
+			<img src="img/nextdoor.png" style="height: auto; width: 60%; margin-left: 20%">
+		</div>
+	</div>
+	<div id="r6-p5" class="page p5">
+		<div class="description">
+			Fortunately, introducing manual and algorithmic "speed bumps" is a design practice we are already very familiar with. For heavy and often irreversible actions like deletion, many design patterns have users confirm these actions before they are completed. Expanding where these patterns are applicable, not only for technical actions, but social ones can help us design defensively to protect user agency and encourage users to make decisions as active participants.
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+<div id="r7" class="r7 row">
+	<div id="r7-p0" class="page cover">
+	</div>
+	<img class="textpage" src="Text/Defensive Design Guide-03.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-04.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-05.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-06.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-07.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-08.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-09.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-10.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-11.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-12.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-13.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-14.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-15.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-16.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-17.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-18.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-19.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-20.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-21.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-22.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-23.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-24.jpg">
+	<img class="textpage" src="Text/Defensive Design Guide-25.jpg">
 </div>
 
 

@@ -198,14 +198,27 @@ body {
 	color: #202B33;
 }
 
+.r0 > .page > a, .r0 > .page > a:visited {
+	color: #202B33;
+}
+
 .r1 > .page {
 	background-color: #DA6668;
 	/*color: #182026;*/
 	color: white;
 }
 
+.r1 > .page > a, .r1 > .page > a:visited {
+	color: white;
+}
+
 .r2 > .page {
 	background-color: #5158A8;
+	color: #dfdfdf;
+}
+
+.r2 > .page > a, .r2 > .page > a:visited, .r4 > .page > a, .r4 > .page > a:visited {
+	color: #dfdfdf;
 }
 
 .r3 > .page {
@@ -214,6 +227,20 @@ body {
 
 .r4 > .page {
 	background-color: #2E706C;
+	color: #dfdfdf;
+}
+
+.r5 > .page {
+	background-color: rgb(78, 15, 140);
+	color: #dfdfdf;
+}
+.r6 > .page {
+	background-color: rgb(94, 145, 94);
+	color: rgb(235, 240, 235);
+}
+
+.r6 > .page > a, .r6 > .page > a:visited {
+	color: rgb(235, 240, 235);	
 }
 
 .cover {
@@ -234,6 +261,15 @@ body {
 
 .p4 {
 	left: 400vw;
+}
+.p5 {
+	left: 500vw;
+}
+.p6 {
+	left: 600vw;
+}
+.p7 {
+	left: 700vw;
 }
 
 .large-title {
@@ -257,6 +293,13 @@ body {
 .title-design-guide {
 	line-height: 1.8em;
 }
+.title-description {
+	margin-top: 10px;
+	font-size: 0.3em;
+	font-family: "Karla";
+	text-transform: italic;
+	font-weight: 800;
+}
 
 .r0-p0-description {
 	font-size: 1.3em;
@@ -274,6 +317,11 @@ body {
 
 #credit, #credit>a {
 	color: #cc897e;
+	background-image: none;
+}
+
+#credit > a:hover {
+	background-image: none;
 }
 
 .cover {
@@ -286,6 +334,13 @@ body {
 	width: 50%;
 	margin-left: 25%;
 	margin-top: 8vh;
+}
+
+.description {
+	font-size: 1.1em;
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 8vh;	
 }
 
 g>rect {
@@ -308,4 +363,30 @@ g.active>rect {
   100% {
   	-webkit-filter: drop-shadow( 0px 0px 0px #54A6FF);
   }
+}
+
+.page > img {
+	width: 100%;
+}
+
+a, .text-emphasis {
+	cursor: pointer;
+	text-decoration: none;
+	background-image: linear-gradient(to top, rgba(255,210,184,0.6) 15%, rgba(0,0,0,0) 20%);
+	-webkit-transition: background-image 500ms ease-out 1s;
+	-webkit-transition: color 200ms ease-in-out;
+}
+a:visited {
+	color: inherit;
+}
+
+a:hover, .text-emphasis:hover {
+	color: black !important;
+	background: linear-gradient(90deg, rgba(255,255,99,1) 0%, rgba(255,210,184,1) 60%, rgba(255,186,71,1) 100%);
+}
+
+.textpage {
+	width: 60%;
+	height: auto;
+	margin-left: 20%;
 }

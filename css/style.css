@@ -137,6 +137,7 @@ body {
 	text-align: center;
 	position: fixed;
 	z-index: 100;
+    pointer-events: all !important;
 }
 
 .row-advance:hover {
@@ -146,11 +147,13 @@ body {
 #previous-row {
 	top: 20px;
 	z-index: 100;
+    pointer-events: all !important;
 }
 
 #next-row {
 	bottom: 0px;
 	z-index: 100;
+    pointer-events: all !important;
 }
 
 .row-advance-button {
@@ -227,6 +230,14 @@ body {
 
 .r4 > .page {
 	background-color: #2E706C;
+	color: #dfdfdf;
+}
+
+.r4 > .page > a, .r4 > .page > a:visited, .r5 > .page > a, .r5 > .page > a:visited, {
+	color: white;
+}
+
+a, a:visited {
 	color: #dfdfdf;
 }
 
@@ -386,7 +397,7 @@ a:hover, .text-emphasis:hover {
 }
 
 .textpage {
-	width: 60%;
+	width: 50%;
 	height: auto;
-	margin-left: 20%;
+	margin-left: 25%;
 }
